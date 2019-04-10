@@ -59,7 +59,7 @@ class ApplicationController < Sinatra::Base
            @article_del= Article.find(params[:id])
 
            @article_del.destroy
-           erb :index
+           erb :delete
 
      end
 
