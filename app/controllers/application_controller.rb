@@ -15,7 +15,7 @@ class ApplicationController < Sinatra::Base
 #create
 
     #index
-    get '/articles' do
+    get '/articles/' do
         @articles= Article.all
         erb :index
     end
@@ -35,11 +35,7 @@ class ApplicationController < Sinatra::Base
 #Read
 
    get '/articles/:id' do
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> f26d58b9482573d47e67831305168d3f26290e8d
      @article = Article.find(params[:id])
      erb :show
    end
@@ -59,17 +55,11 @@ class ApplicationController < Sinatra::Base
     end
 
 #Delete
-<<<<<<< HEAD
      delete '/articles/:id' do
            @article_del= Article.find(params[:id])
-        
+
            @article_del.destroy
            erb :delete
      end
-=======
-    #  delete '/articles/:id' do
-     #
-    #  end
->>>>>>> f26d58b9482573d47e67831305168d3f26290e8d
 
 end
