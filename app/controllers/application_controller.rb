@@ -51,7 +51,7 @@ class ApplicationController < Sinatra::Base
          @article_mod= Article.find(params[:id])
          @article_mod.update(params[:article])
 
-       redirect "/articles/#{@article_mod.id}"  #esta forma se llama interpolation
+       redirect to "/articles/#{@article_mod.id}"  #esta forma se llama interpolation
     end
 
 #Delete
