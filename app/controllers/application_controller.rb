@@ -15,7 +15,7 @@ class ApplicationController < Sinatra::Base
 #create
 
     #index
-    get '/articles/' do
+    get '/articles' do
         @articles= Article.all
         erb :index
     end
@@ -60,7 +60,7 @@ class ApplicationController < Sinatra::Base
 
            @article_del.destroy
            erb :delete
-          
+
      end
 
 end
